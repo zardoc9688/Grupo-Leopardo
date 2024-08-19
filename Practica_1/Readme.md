@@ -47,13 +47,7 @@ Si estás interesado en explorar otras herramientas educativas que ofrecen exper
      - Permite construir desde puertas lógicas básicas hasta CPUs completas.
    - **Sitio web**: [Logisim](http://www.cburch.com/logisim/)
 
-2. **TIA Portal**:
-   - **Descripción**: TIA Portal (Totally Integrated Automation Portal) es un entorno de ingeniería desarrollado por Siemens para el diseño y la programación de sistemas de automatización industrial. Aunque no es específico para la construcción de computadores como Nand2Tetris, TIA Portal es útil para quienes desean aprender sobre la automatización y el control de procesos industriales, incluyendo la simulación de lógica programable.
-   - **Características**:
-     - Diseño y programación de controladores lógicos programables (PLC).
-     - Simulación y pruebas de automatización industrial.
-     - Integración de hardware y software en un entorno unificado.
-   - **Sitio web**: [TIA Portal](https://new.siemens.com/global/en/products/automation/industry-software/automation-software/tia-portal.html)
+2. ...
 
 ## Recursos Usados
 
