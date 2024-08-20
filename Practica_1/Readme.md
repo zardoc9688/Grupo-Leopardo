@@ -1,4 +1,4 @@
-# Desarrollo de la primer práctica (Pratica_1).
+# Desarrollo de la primera práctica (Pratica #1).
 
 ## ¿Qué es Nand2Tetris?
 
