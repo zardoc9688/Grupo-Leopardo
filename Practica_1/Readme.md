@@ -8,15 +8,13 @@ Nand2Tetris es más que un simple curso de arquitectura de computadores; es un r
 2. **Construir componentes de hardware**: Utilizando las compuertas básicas, se diseñan componentes más complejos como multiplexores, registros, unidades aritmético-lógicas (ALU), y la memoria.
 3. **Diseñar una CPU y una máquina completa**: Los componentes anteriores se combinan para formar una CPU funcional, capaz de ejecutar programas escritos en lenguaje ensamblador.
 
-## Tipos de Archivos en Nand2Tetris
+##Introducción al proyecto #1 de Nand2Tetris
 
-Durante el curso y los proyectos de Nand2Tetris, trabajarás con varios tipos de archivos, cada uno con un propósito específico:
+El Proyecto #1 de Nand2Tetris representa el verdadero punto de partida en la creación de una computadora, comenzando desde lo fundamental. La tarea principal de dicho proyecto se realizará durante la primera etapa que consiste en adquirir el conocimiento de los bloques de construcción de compuertas lógicas primitivas esenciales de cualquier sistema digital. Durante el prototipado y simulación de puertas tales como **NOT, AND, OR y XOR**, los cimientos de construcción y elementos constituyentes de circuitos más sofisticados, que en la etapa final constituyen una computadora completamente operacional. Implementandose en un simulador de hardware, facilitado por las herramientas del curso, los estudiantes no solo implementarán jerárquicamente tales compuertas sino que probarán la funcionalidad adecuada de las mismas. En suma, este proyecto es esencial para garantizar un conocimiento adecuado de la forma en que la lógica binaria informa las operaciones coloquialmente dominantes entre los equipos, por lo que une la brecha entre la teoría y la práctica en lo que respecta a la ingeniería de sistemas.
 
-- **.hdl** (Hardware Description Language): Archivos que describen la estructura de los circuitos de hardware. Aquí es donde se definen las compuertas lógicas y otros componentes.
-- **.tst** (Test Script): Archivos que contienen scripts para probar los circuitos descritos en los archivos `.hdl`. Estos scripts automatizan las pruebas de funcionamiento.
-- **.out** (Expected Output): Archivos que definen la salida esperada de los circuitos cuando se ejecutan los test scripts. Se utilizan para verificar que la implementación funciona correctamente.
-- **.cmp** (Comparison): Archivos que comparan la salida real de un circuito con la salida esperada definida en los archivos `.out`.
+## Consideraciones Importantes para Trabajar con Nand2Tetris
 
+Para abordar el Proyecto #1 de Nand2Tetris, es crucial comprender el funcionamiento de las compuertas lógicas fundamentales **(NOT, AND, OR, XOR)**. Aparte de necesitar un conocimiento comprensivo de estos elementos, desarrollar circuitos más avanzados como multiplexores **(MUX)** y demultiplexores **(DMUX)** requiere experiencia con el simulador de hardware y su estructura para diseñar, implementar y probar cada compuerta lógica para garantizar un comportamiento conforme a los valores teóricos esperados. Se necesitarán recursos tales como el libro **“The Elements of Computing Systems”** para garantizar que el trabajo del proyecto se entiende y ejecuta de una manera que proporciona un sólido marco teórico y de instrucciones sobre cómo desarrollar y verificar los circuitos en el simulador.
 ## Tipos de Compuertas a Desarrollar
 
 A lo largo del curso, desarrollarás una variedad de compuertas lógicas que sirven como bloques fundamentales para construir sistemas más complejos. Entre ellas se incluyen:
@@ -32,9 +30,14 @@ A lo largo del curso, desarrollarás una variedad de compuertas lógicas que sir
 - **Multiplexor (MUX)**: Selecciona entre múltiples entradas y transmite una de ellas como salida, basado en señales de selección.
 - **Demultiplexor (DMUX)**: Toma una única entrada y la dirige a una de varias salidas, basado en señales de selección.
 
-## Consideraciones Importantes para Trabajar con Nand2Tetris
+## Tipos de Archivos en Nand2Tetris
 
-Para abordar el Proyecto #1 de Nand2Tetris, es crucial comprender el funcionamiento de las compuertas lógicas fundamentales **(NOT, AND, OR, XOR)**. Aparte de necesitar un conocimiento comprensivo de estos elementos, desarrollar circuitos más avanzados como multiplexores **(MUX)** y demultiplexores **(DMUX)** requiere experiencia con el simulador de hardware y su estructura para diseñar, implementar y probar cada compuerta lógica para garantizar un comportamiento conforme a los valores teóricos esperados. Se necesitarán recursos tales como el libro **“The Elements of Computing Systems”** para garantizar que el trabajo del proyecto se entiende y ejecuta de una manera que proporciona un sólido marco teórico y de instrucciones sobre cómo desarrollar y verificar los circuitos en el simulador.
+Durante el curso y los proyectos de Nand2Tetris, trabajarás con varios tipos de archivos, cada uno con un propósito específico:
+
+- **.hdl** (Hardware Description Language): Archivos que describen la estructura de los circuitos de hardware. Aquí es donde se definen las compuertas lógicas y otros componentes.
+- **.tst** (Test Script): Archivos que contienen scripts para probar los circuitos descritos en los archivos `.hdl`. Estos scripts automatizan las pruebas de funcionamiento.
+- **.out** (Expected Output): Archivos que definen la salida esperada de los circuitos cuando se ejecutan los test scripts. Se utilizan para verificar que la implementación funciona correctamente.
+- **.cmp** (Comparison): Archivos que comparan la salida real de un circuito con la salida esperada definida en los archivos `.out`.
 
 ## Herramientas Similares a Nand2Tetris
 
