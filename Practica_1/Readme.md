@@ -47,7 +47,13 @@ Si estás interesado en explorar otras herramientas educativas que ofrecen exper
      - Permite construir desde puertas lógicas básicas hasta CPUs completas.
    - **Sitio web**: [Logisim](http://www.cburch.com/logisim/)
 
-2. ...
+2. **Circuit Verse**
+   - **Descripción**: CircuitVerse es una plataforma educativa en línea diseñada para enseñar y simular circuitos digitales de manera interactiva. La plataforma está dirigida tanto a principiantes como a usuarios avanzados, proporcionando una forma accesible y práctica de aprender sobre la lógica digital y el diseño de circuitos.
+   - **Caracteristicas**:
+     - Interfaz gráfica intuitiva.
+     - Amplia biblioteca de componentes.
+     - Colaboración y compartición.
+   - **Sitio web**: [Circuit Verse](https://circuitverse.org)
 
 ## Recursos Usados
 
