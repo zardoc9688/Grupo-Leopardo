@@ -8,7 +8,7 @@ Nand2Tetris es más que un simple curso de arquitectura de computadores; es un r
 2. **Construir componentes de hardware**: Utilizando las compuertas básicas, se diseñan componentes más complejos como multiplexores, registros, unidades aritmético-lógicas (ALU), y la memoria.
 3. **Diseñar una CPU y una máquina completa**: Los componentes anteriores se combinan para formar una CPU funcional, capaz de ejecutar programas escritos en lenguaje ensamblador.
 
-##Introducción al proyecto #1 de Nand2Tetris
+## Introducción al proyecto #1 de Nand2Tetris
 
 El Proyecto #1 de Nand2Tetris representa el verdadero punto de partida en la creación de una computadora, comenzando desde lo fundamental. La tarea principal de dicho proyecto se realizará durante la primera etapa que consiste en adquirir el conocimiento de los bloques de construcción de compuertas lógicas primitivas esenciales de cualquier sistema digital. Durante el prototipado y simulación de puertas tales como **NOT, AND, OR y XOR**, los cimientos de construcción y elementos constituyentes de circuitos más sofisticados, que en la etapa final constituyen una computadora completamente operacional. Implementandose en un simulador de hardware, facilitado por las herramientas del curso, los estudiantes no solo implementarán jerárquicamente tales compuertas sino que probarán la funcionalidad adecuada de las mismas. En suma, este proyecto es esencial para garantizar un conocimiento adecuado de la forma en que la lógica binaria informa las operaciones coloquialmente dominantes entre los equipos, por lo que une la brecha entre la teoría y la práctica en lo que respecta a la ingeniería de sistemas.
 
