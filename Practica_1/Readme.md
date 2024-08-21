@@ -36,8 +36,6 @@ A lo largo del curso, desarrollarás una variedad de compuertas lógicas que sir
 
 Para abordar el Proyecto #1 de Nand2Tetris, es crucial comprender el funcionamiento de las compuertas lógicas fundamentales **(NOT, AND, OR, XOR)**. Aparte de necesitar un conocimiento comprensivo de estos elementos, desarrollar circuitos más avanzados como multiplexores **(MUX)** y demultiplexores **(DMUX)** requiere experiencia con el simulador de hardware y su estructura para diseñar, implementar y probar cada compuerta lógica para garantizar un comportamiento conforme a los valores teóricos esperados. Se necesitarán recursos tales como el libro **“The Elements of Computing Systems”** para garantizar que el trabajo del proyecto se entiende y ejecuta de una manera que proporciona un sólido marco teórico y de instrucciones sobre cómo desarrollar y verificar los circuitos en el simulador.
 
-![image](https://github.com/user-attachments/assets/d929643a-c210-45a7-9d52-0133ad99b982)
-
 ## Herramientas Similares a Nand2Tetris
 
 Si estás interesado en explorar otras herramientas educativas que ofrecen experiencias similares a Nand2Tetris, aquí tienes algunas opciones:
