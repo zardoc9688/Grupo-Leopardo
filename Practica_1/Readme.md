@@ -99,14 +99,48 @@ Xor = A(¬B) + (¬A)B
 
 ## Mux
 
-La tabla de verdad de la compuerta Mux se puede reducir (en términos de And, Or y Not) de forma que esta sólo depende de la entrada sel. Cuándo
+La tabla de verdad de la compuerta Mux se puede reducir (en términos de And, Or y Not) de forma que esta sólo depende de la entrada sel. cuando
 
 Mux = (¬sel) a + sel b
 
 ![image](https://github.com/user-attachments/assets/a2b6722f-26cc-40e3-81a4-644cb8d9a538)
 
 
-## Mux
+## DMux
+
+La tabla de verdad de la compuerta DMux se reduce utilizando las compuertas Not y And, de manera que la salida depende únicamente del bit de selección sel. Cuando sel es 0, la señal de entrada in se envía a la salida a. Cuando sel es 1, la señal de entrada se envía a la salida b.
+
+## And16
+
+La compuerta And16 realiza una operación And en dos buses de 16 bits, comparando bit a bit. Cada par de bits correspondientes de las entradas a y b se pasa a una compuerta And, produciendo una salida de 16 bits en total.
+
+## OR16
+
+La compuerta OR16 realiza una operación Or en dos buses de 16 bits, comparando bit a bit. Cada par de bits correspondientes de las entradas a y b se pasa a una compuerta Or, produciendo una salida de 16 bits en total.
+
+## Mux16
+
+Un multiplexor de 16 bits es casi similar al Chip Multiplexor descrito anteriormente, excepto que ambas entradas son cada una de 16 bits de ancho, mientras que el selector es de un solo bit.
+
+## Or8Way
+
+La compuerta Or8Way realiza una operación Or en un bus de 8 bits, devolviendo 1 si al menos uno de los bits de entrada es 1. La implementación se realiza en tres niveles de compuertas Or.
+
+## Mux4Way16
+
+El Mux4Way16 selecciona entre cuatro buses de 16 bits (a, b, c, d) utilizando dos bits de selección (sel[0] y sel[1]). La salida es un bus de 16 bits (out) que corresponde al bus seleccionado. La implementación se realiza en dos etapas utilizando compuertas Mux16.
+
+## Mux8Way16
+
+El Mux8Way16 selecciona entre ocho buses de 16 bits (a, b, c, d, e, f, g, h) utilizando tres bits de selección (sel[0], sel[1], sel[2]). La salida es un bus de 16 bits (out) que corresponde al bus seleccionado. La implementación se realiza en dos etapas utilizando compuertas Mux4Way16 y Mux16
+
+## DMux4Way
+
+El DMux4Way distribuye una señal de entrada (in) a una de cuatro salidas (a, b, c, d), basándose en dos bits de selección (sel[0] y sel[1]). La implementación se realiza en dos etapas utilizando compuertas DMux:
+
+## DMux8Way
+
+El DMux8Way distribuye una señal de entrada (in) a una de ocho salidas (a, b, c, d, e, f, g, h), utilizando tres bits de selección (sel[0], sel[1], sel[2]). La implementación se realiza en dos etapas utilizando compuertas DMux y DMux4Way:
 
 ## Recursos Usados
 
