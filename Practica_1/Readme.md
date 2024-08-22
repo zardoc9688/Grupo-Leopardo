@@ -59,6 +59,9 @@ Si estás interesado en explorar otras herramientas educativas que ofrecen exper
      - Colaboración y compartición.
    - **Sitio web**: [Circuit Verse](https://circuitverse.org)
 
+
+## Proyecto 1 .hdl
+
 ## Recursos Usados
 
 - [Sitio oficial de Nand2Tetris](https://www.nand2tetris.org/)
