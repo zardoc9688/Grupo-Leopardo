@@ -62,6 +62,28 @@ Si estás interesado en explorar otras herramientas educativas que ofrecen exper
 
 ## Proyecto 1 .hdl
 
+A continuacion explicaremos brevemente cada uno de los .hdl.
+
+## Nand
+
+La compuerta Nand está creada de manera nativa en las herramientas de Nand2Tetris. Sirve como la base para construir todas las demás compuertas lógicas.
+
+![image](https://github.com/user-attachments/assets/40439d16-d060-40a4-aa3d-7324c08c993f)
+
+## Not
+
+La compuerta Not invierte su entrada. Se puede construir utilizando una única compuerta Nand.
+
+## Nand
+
+## Nand
+
+## Nand
+
+## Nand
+
+
+
 ## Recursos Usados
 
 - [Sitio oficial de Nand2Tetris](https://www.nand2tetris.org/)
