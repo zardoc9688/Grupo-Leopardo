@@ -74,15 +74,39 @@ La compuerta Nand está creada de manera nativa en las herramientas de Nand2Tetr
 
 La compuerta Not invierte su entrada. Se puede construir utilizando una única compuerta Nand.
 
-## Nand
+![image](https://github.com/user-attachments/assets/6172ce31-bcfe-4b79-a78e-8e421ca03371)
 
-## Nand
+## And
 
-## Nand
+La compuerta And devuelve 1 solo si ambas entradas son 1. Para implementarla usando la compuerta Nand, se utilizan la compuerta Nand y su salida se le niega con la compuerta not anteriormente creada.
 
-## Nand
+![image](https://github.com/user-attachments/assets/f95f4f8d-39ea-46e5-8622-6b18b1268342)
+
+## Or
+
+La compuerta Or devuelve 1 si al menos una de las entradas es 1, y devuelve 0 solo cuando ambas entradas son 0. Se puede construir utilizando compuertas Not y una compuerta Nand. Primero, las entradas se invierten usando las compuertas Not, y luego esas salidas invertidas se combinan utilizando la compuerta Nand. Este diseño se basa en la ley de De Morgan, que permite simular el comportamiento de Or utilizando una compuerta Nand y compuertas Not.
+
+![image](https://github.com/user-attachments/assets/f8b2e48c-477d-448b-a9b9-f94fd141d03d)
+
+## Xor
+
+La compuerta Xor (o exclusión lógica) devuelve 1 cuando las entradas son diferentes y 0 cuando son iguales. Se puede construir utilizando las compuertas Not, And y Or. En esta implementación:
+
+Xor = A(¬B) + (¬A)B
+
+![image](https://github.com/user-attachments/assets/e1a01434-e6d2-4a66-b78d-34868d431892)
 
 
+## Mux
+
+La tabla de verdad de la compuerta Mux se puede reducir (en términos de And, Or y Not) de forma que esta sólo depende de la entrada sel. Cuándo
+
+Mux = (¬sel) a + sel b
+
+![image](https://github.com/user-attachments/assets/a2b6722f-26cc-40e3-81a4-644cb8d9a538)
+
+
+## Mux
 
 ## Recursos Usados
 
