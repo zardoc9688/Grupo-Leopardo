@@ -11,9 +11,13 @@ El Objetivo del proyecto #2 tiene como fundamento el desarrollo de conocimiento 
 
 <!--  Insertar tabla de verdad junto con el diseño de compuertas   -->
 
+![WhatsApp Image 2024-09-09 at 4 06 46 PM](https://github.com/user-attachments/assets/5045ebfd-f136-45a0-a680-b79f74889815)
+
 -*Full Adder*: Se encarga de sumar no solo dos bits, sino también un tercer bit de acarreo (carry-in) que proviene de una suma anterior. Genera una suma (sum) y un acarreo de salida (carry-out). Cuando los bits de entrada a, b y c se suman, el Full Adder produce una salida de suma (sum) y determina si hubo un acarreo que debe transferirse a la siguiente etapa de suma. Para la elaboración de este chip se puede llevar a cabo de dos Half-Adder o compuertas lógicas.
 
 <!--  Insertar tabla de verdad junto con el diseño de compuertas   -->
+
+![WhatsApp Image 2024-09-09 at 4 06 46 PM (1)](https://github.com/user-attachments/assets/7847cdba-14b8-4f9e-8379-ecf1706668a2)
 
 -*Add16*: Es un componente que realiza la suma de dos números binarios de 16 bits, generando un resultado de 16 bits junto con un bit de acarreo de salida. La suma de dos números de 16 bits implica sumar cada bit de ambos números y propagar el acarreo de los bits LSB hacia los bits MSB. Cada suma de un par de bits produce un resultado (sum) y un posible acarreo, que debe añadirse a la siguiente suma. Para desarrollar este chip, se producir en varios Full Adder conectados entre sí debido a que este chip suma tres bits (dos de entrada y el acarreo). Cada Full Adder suma los bits correspondientes de las posiciones de a y b, junto con el acarreo de la posición anterior, y genera una suma y un nuevo acarreo.
 
