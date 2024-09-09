@@ -23,3 +23,4 @@ El Objetivo del proyecto #2 tiene como fundamento el desarrollo de conocimiento 
 
 <!--  Insertar tabla de verdad junto con el diseño de compuertas   -->
 
+-*ALU*: Es uno de los componentes fundamentales de un procesador, encargada de realizar operaciones aritméticas y lógicas. Recibe dos entradas de 16 bits, x y y, y realiza una operación definida por un conjunto de bits de control. Los bits de control especifican qué operaciones se deben realizar sobre las entradas antes de combinarlas (por ejemplo, si deben ser negadas o establecidas a cero), así como la operación que debe ejecutarse **(suma, AND, OR)*. La ALU también genera indicadores como si el resultado es cero o negativo.
