@@ -100,5 +100,5 @@ El objetivo de este proyecto radica en mostrar al estudiante desde el mas basico
    * ALU de propósito específico: Diseñadas para tareas específicas, como el procesamiento de señales digitales (DSP), criptografía, o       sistemas embebidos de control.
   ## Bibliografia
 
-  [Lectura 2 ](https://drive.google.com/file/d/1ie9s3GjM2TrvL7PrEZJ00gEwezgNLOBm/view)
+  [Lectura 2 ](https://drive.google.com/file/d/1ie9s3GjM2TrvL7PrEZJ00gEwezgNLOBm/view) <br>
   [The Elements of Computing Systems](https://www.nand2tetris.org/_files/ugd/44046b_89c60703ebfc4bf39acef13bdc050f5d.pdf)
