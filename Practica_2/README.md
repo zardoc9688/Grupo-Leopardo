@@ -91,3 +91,14 @@ El objetivo de este proyecto radica en mostrar al estudiante desde el mas basico
 **Lógica Secuencial**:
 - Se usa para implementar máquinas de estado, controladores, y sistemas que requieren seguimiento de estados anteriores para tomar decisiones futuras.
 - Ejemplo: Controladores de semáforos o el manejo de la memoria en un computador.
+
+3. **Bonus: ¿Qué tipo de unidades aritmético lógicas existen?**
+
+   * ALU general: es la mas común y se usa para operaciones aritméticas y lógicas básicas.
+   * ALU FPU: Se usa en operaciones con números de punto flotante (con parte decimal).
+   * ALU SIMD: (Single Instruction, Multiple Data). Ejecuta la misma operación en múltiples datos a la vez
+   * ALU de propósito específico: Diseñadas para tareas específicas, como el procesamiento de señales digitales (DSP), criptografía, o       sistemas embebidos de control.
+  ## Bibliografia
+
+  [Lectura 2 ](https://drive.google.com/file/d/1ie9s3GjM2TrvL7PrEZJ00gEwezgNLOBm/view)
+  [The Elements of Computing Systems](https://www.nand2tetris.org/_files/ugd/44046b_89c60703ebfc4bf39acef13bdc050f5d.pdf)
