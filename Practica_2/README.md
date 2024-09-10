@@ -38,11 +38,17 @@ Para este tercer proyecto titulado ***Logica Secuencial***, se ha dejado atras e
 
 1. **¿Cual es el objetivo de este proyecto y que se debe hacer para desarrollarlo?**
 
-El objetivo de este proyecto radica en mostrar al estudiante desde el mas basico, todos los componentes que conforman un elemento tan fundamental de una computadora como lo es la memoria RAM, por lo que explica en un primer momento de manera teorica y grafica el funcionamiento de cada uno de de estos elementos y como se ven involucrados con los siquientes de la lista, para que el aprendiz con esta informacion asimilada sea capaz de generar un codigo .hdl que simule el comportamiento de estos mismos y por ultimo el comportamiento de una memoria RAM. Para esto, los componentes que deben ser desarrollados y que hacen parte de una Memoria de Acceso Aleatorio son:
+El objetivo de este proyecto radica en mostrar al estudiante desde el mas basico, todos los componentes que conforman un elemento tan fundamental de una computadora como lo es la memoria RAM, por lo que explica en un primer momento de manera teorica y grafica el funcionamiento de cada uno de de estos elementos y como se ven involucrados con los siquientes de la lista, para que el aprendiz con esta informacion asimilada sea capaz de generar un codigo .hdl que simule el comportamiento de estos mismos y por ultimo el comportamiento de una memoria RAM. Para esto, los componentes SECUENCIALES que deben ser desarrollados y que hacen parte de una Memoria de Acceso Aleatorio son:
 
--*El reloj*: Tambien conocido como "reloj maestro" representa el pasar del tiempo en la mayoria de los computadores a traves de un oscilador  que alterna sus señales entre 0 y 1. El intervalo de tiempo que transcurre en lo que conocemos como un "tick" y un "tock" se conoce como ciclo.
+-*El reloj*: Tambien conocido como "reloj maestro" representa el pasar del tiempo en la mayoria de los computadores a traves de un oscilador  que alterna sus señales entre 0 y 1. Al intervalo de tiempo que transcurre en lo que conocemos como un "tick" y un "tock" se le denomina ciclo. Por medio de circuitos esta señal es transmitida a todos los otros chips del sistema.
 
 -*Flip_Flop (DFF)*: Es un dispositivo cuya interfaz consiste en un bit de entrada, un bit de salida y una entrada de "reloj" que va cambiando de valor conforme varia el "reloj maestro" de la maquina descrito anteriormente. Para la realizacion de este proyecto sera empleado simplemente para que su salida sea la entrada obtenida en la unidad de tiempo anterior; este elemento sera usado como chip primitivo para la construccion de los siguientes.
+
+-*Registro*: Es un dispositivo con la capacidad de almacenar o recordar un valor. Si recordamos el elemento descrito anteriormente se puede concluir que es posible diseñar un dispositivo de registro mediante un DFF si se alimenta la salida de este mismo a su entrada; adicionalmente se ve necesario implementar un metodo para que la informacion pueda ser no solo almacenada sino reescrita, por lo tanto se añade como una de sus entradas un bit que indica que procedimiento quiere realizarse con la informacion.
+
+-*Memorias*: Tambien conocido como bancos de memoria son construidos luego de apilar muchos registros para formar una unidad de memoria cuyo acceso sea aleatorio. Se dice que es de acceso aleatorio ya que las operaciones de lectura o escritura pueden acceder a palabras a la azar mediante una direccion logica que es de tipo unica.
+
+-*Contadores*: Es un dispositivo o chip secuencial cuyo estado es un numero entero el cual va incrementanndo conforme pasa cada unidad de tiempo, ademas para este tipo de implementacion es necesario implementar otras funciones como la de reestablecer el conteo a 0 o disminuir en lugar de incrementar.
 
 2. **¿Cuales son las principales Diferencias entre logica Aritmetica y Logica Secuencial?**
 
