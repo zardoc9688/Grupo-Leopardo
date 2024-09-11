@@ -11,10 +11,20 @@ CHIP FullAdder {
         carry;   // Left bit of a + b + c
 
     PARTS:
+    /*
+    Here describes how the Full Adder is constructed using other basic chips:
+
+    The first Xor gate computes the XOR of inputs a and b.
+    An And gate computes the AND of inputs a and b.
+    A second Xor gate computes the final sum by XORing the result of the first XOR (xor1) with input c.
+    Another And gate computes the AND of xor1 and c.
+    Finally, an Or gate computes the carry by ORing the results of the two AND operations.
+    */
     Xor(a=a,b=b,out=xor1);
     And(a=a,b=b,out=and1);
     Xor(a=xor1,b=c,out=sum);
     And(a=xor1,b=c,out=and2);
     Or(a=and1,b=and2,out=carry);
     //// Replace this comment with your code.
+    //The explanation of how it works can be found on our the website or on github.
 }
