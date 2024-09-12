@@ -9,7 +9,7 @@
  * The value of the selected register is emitted by out.
  */
 CHIP RAM64 {
-    IN in[16], load, address[6];
+    IN in[16], load, dir[6];
     OUT out[16];
 
 
