@@ -1,0 +1,58 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/3/a/PC.hdl
+/**
+ * A 16-bit counter.
+ * if      reset(t): out(t+1) = 0
+ * else if load(t):  out(t+1) = in(t)
+ * else if inc(t):   out(t+1) = out(t) + 1
+ * else              out(t+1) = out(t)
+ */
+CHIP PC {
+    IN in[16],inc, load, reset;
+
+    //'in[16]': This is the input value that can be loaded into the counter.
+    //'load': Control bit indicating whether the value in 'in' should be loaded.
+    //'inc': Control bit indicating whether the counter value should be incremented.
+    //'reset': Control bit that resets the counter to 0.
+    
+    OUT out[16];
+
+    //'out[16]': The 16-bit output containing the current value of the counter.
+    
+    PARTS:
+
+    // The 'Add16' component adds 1 to the value of 'outloop'. The value of 'b[0]' is true (1), which represents the sum of 1. 
+    // The other bits of 'b[1..15]' are 0. 
+    // The output 'outloopInc' is the value of 'outloop' incremented by 1.
+    Add16(a=outloop, b[0]=true, b[1..15]=false, out=outloopInc);
+
+    // The first Mux16 selects between 'outloop' (the current value) and 'outloopInc' (the incremented value),
+    // according to the value of the 'inc' bit. If 'inc' is 1, it selects the incremented value, otherwise it selects the current value.
+    Mux16(a=outloop, b=outloopInc, sel=inc, out=t0);
+
+    // The second Mux16 selects between 't0' (the actual or incremented value, depending on 'inc'),
+    // and 'in' (the input value). If 'load' is 1, it selects 'in', otherwise it selects 't0'.
+    Mux16(a=t0, b=in, sel=load, out=t1);
+
+    // The third Mux16 selects between 't1' (the current value, incremented, or loaded from 'in'),
+    // and 0 (represented by 'false'). If 'reset' is 1, it selects 0, resetting the counter. Otherwise, select 't1'.
+    Mux16(a=t1, b=false, sel=reset, out=t2);
+
+
+    // The OR gate combines the 'load' and 'inc' signals. If either of these signals is 1, the result will be 1.
+    // This ensures that when a new value is loaded or incremented, the counter updates its value.
+    Or(a=load, b=inc, out=loadOrInc);
+
+    // The next OR gate combines 'loadOrInc' with 'reset'. If 'reset' is 1, the resulting signal will be 1,
+    // indicating that the value in the register should be updated. If 'reset' is 0 but 'load' or 'inc' is 1, the counter will also be updated.
+    Or(a=loadOrInc, b=reset, out=loadRAM);
+
+    // The final value 't2' is stored in the 16-bit register of the counter (simulated here with 'RAM8').
+    // The 'loadRAM' signal controls whether the register should be updated with the value in 't2'.
+    //'outloop' is an internal signal that contains the current value of the counter and is fed back into the loop.
+    //'out' is the output that provides the value of the counter.
+    RAM8(in=t2, load=loadRAM, out=outloop, out=out);
+    //// Replace this comment with your code.
+}
