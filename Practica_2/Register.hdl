@@ -6,30 +6,38 @@
  * 16-bit register:
  * If load is asserted, the register's value is set to in;
  * Otherwise, the register maintains its current value:
- * if (load(t)) out(t+1) = int(t), else out(t+1) = out(t)
+ * if (load(t)) out(t+1) = in(t), else out(t+1) = out(t)
  */
 CHIP Register {
-    IN in[16], load;
-    OUT out[16];
+    // Inputs:
+    IN in[16],         // 16-bit input value to be stored in the register
+       load;           // Load signal, which controls whether to update the register's value
+
+    // Outputs:
+    OUT out[16];       // 16-bit output value, the current value stored in the register
 
     PARTS:
+    // Each "Bit" represents a single bit of the 16-bit register.
+    // The "Bit" component will update its value based on the `load` signal.
+    // If `load` is 1, the bit will be set to the corresponding value from `in[16]`.
+    // Otherwise, it will keep its current value.
 
-    Bit(in=in[0], load=load, out=out[0]);
-    Bit(in=in[1], load=load, out=out[1]);
-    Bit(in=in[2], load=load, out=out[2]);
-    Bit(in=in[3], load=load, out=out[3]);
-    Bit(in=in[4], load=load, out=out[4]);
-    Bit(in=in[5], load=load, out=out[5]);
-    Bit(in=in[6], load=load, out=out[6]);
-    Bit(in=in[7], load=load, out=out[7]);
-    Bit(in=in[8], load=load, out=out[8]);
-    Bit(in=in[9], load=load, out=out[9]);
-    Bit(in=in[10], load=load, out=out[10]);
-    Bit(in=in[11], load=load, out=out[11]);
-    Bit(in=in[12], load=load, out=out[12]);
-    Bit(in=in[13], load=load, out=out[13]);
-    Bit(in=in[14], load=load, out=out[14]);
-    Bit(in=in[15], load=load, out=out[15]);
+    Bit(in=in[0], load=load, out=out[0]);  // Bit 0 of the 16-bit register
+    Bit(in=in[1], load=load, out=out[1]);  // Bit 1 of the 16-bit register
+    Bit(in=in[2], load=load, out=out[2]);  // Bit 2 of the 16-bit register
+    Bit(in=in[3], load=load, out=out[3]);  // Bit 3 of the 16-bit register
+    Bit(in=in[4], load=load, out=out[4]);  // Bit 4 of the 16-bit register
+    Bit(in=in[5], load=load, out=out[5]);  // Bit 5 of the 16-bit register
+    Bit(in=in[6], load=load, out=out[6]);  // Bit 6 of the 16-bit register
+    Bit(in=in[7], load=load, out=out[7]);  // Bit 7 of the 16-bit register
+    Bit(in=in[8], load=load, out=out[8]);  // Bit 8 of the 16-bit register
+    Bit(in=in[9], load=load, out=out[9]);  // Bit 9 of the 16-bit register
+    Bit(in=in[10], load=load, out=out[10]); // Bit 10 of the 16-bit register
+    Bit(in=in[11], load=load, out=out[11]); // Bit 11 of the 16-bit register
+    Bit(in=in[12], load=load, out=out[12]); // Bit 12 of the 16-bit register
+    Bit(in=in[13], load=load, out=out[13]); // Bit 13 of the 16-bit register
+    Bit(in=in[14], load=load, out=out[14]); // Bit 14 of the 16-bit register
+    Bit(in=in[15], load=load, out=out[15]); // Bit 15 of the 16-bit register
 
     //// Replace this comment with your code.
 }
