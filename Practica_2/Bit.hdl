@@ -14,7 +14,12 @@ CHIP Bit {
    
 
     PARTS:
+    // Multiplexer: selects between the current value of the register (lout) 
+    // or the new input (in), depending on the control signal (load).
     Mux(a=lout, b=in, sel=load, out=out1);
+
+    // D-type flip-flop: stores the value selected by the multiplexer.
+    // The stored value (lout) is fed back into the multiplexer for the next operation.
     DFF(in=out1, out=lout, out=out);
 
     //// Replace this comment with your code.
