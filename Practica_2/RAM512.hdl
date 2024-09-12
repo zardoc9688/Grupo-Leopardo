@@ -9,29 +9,29 @@
  * The value of the selected register is emitted by out.
  */
 CHIP RAM512 {
-    IN in[16], load, dir[9];
+    IN in[16], load, address[9];
     OUT out[16];
 
     PARTS:
 
     // First the signal is split into 8 separate signals because there are 8 banks
     // Based on the 3 most significant bits of the address, one of the 8 RAM64 banks will be selected
-    DMux8Way(in=load, sel=dir[6..8], a=load0, b=load1, c=load2, d=load3, e=load4, f=load5, g=load6, h=load7);
+    DMux8Way(in=load, sel=address[6..8], a=load0, b=load1, c=load2, d=load3, e=load4, f=load5, g=load6, h=load7);
 
     // The corresponding 'load' signal is passed according to the output of the demultiplexer which indicates what will be done with the data.
-    // The remaining 6 bits within 'dir' tell me which register is selected
+    // The remaining 6 bits within 'address' tell me which register is selected
     // The outputs are stored
-    RAM64(in=in, load=load0, dir=dir[0..5], out=out0);
-    RAM64(in=in, load=load1, dir=dir[0..5], out=out1);
-    RAM64(in=in, load=load2, dir=dir[0..5], out=out2);
-    RAM64(in=in, load=load3, dir=dir[0..5], out=out3);
-    RAM64(in=in, load=load4, dir=dir[0..5], out=out4);
-    RAM64(in=in, load=load5, dir=dir[0..5], out=out5);
-    RAM64(in=in, load=load6, dir=dir[0..5], out=out6);
-    RAM64(in=in, load=load7, dir=dir[0..5], out=out7);
+    RAM64(in=in, load=load0, address=address[0..5], out=out0);
+    RAM64(in=in, load=load1, address=address[0..5], out=out1);
+    RAM64(in=in, load=load2, address=address[0..5], out=out2);
+    RAM64(in=in, load=load3, address=address[0..5], out=out3);
+    RAM64(in=in, load=load4, address=address[0..5], out=out4);
+    RAM64(in=in, load=load5, address=address[0..5], out=out5);
+    RAM64(in=in, load=load6, address=address[0..5], out=out6);
+    RAM64(in=in, load=load7, address=address[0..5], out=out7);
 
     // A general output is stored the output of one of the previous 8 banks.
     // All this taking into account the address of the bank that was obtained at the beginning with the 3 bits
-    Mux8Way16(a=out0, b=out1, c=out2, d=out3, e=out4, f=out5, g=out6, h=out7, sel=dir[6..8], out=out);
+    Mux8Way16(a=out0, b=out1, c=out2, d=out3, e=out4, f=out5, g=out6, h=out7, sel=address[6..8], out=out);
     //// Replace this comment with your code.
 }
