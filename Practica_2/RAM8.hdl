@@ -9,21 +9,33 @@
  * The value of the selected register is emitted by out.
  */
 CHIP RAM8 {
-    IN in[16], load, address[3];
-    OUT out[16];
-    
+    // Inputs:
+    IN in[16],         // 16-bit input, the data to be stored
+       load,           // load signal, controls whether to write data to memory
+       address[3];     // 3-bit address, selects one of 8 registers
+
+    // Outputs:
+    OUT out[16];       // 16-bit output, the data from the selected register
+
     PARTS:
+    // DMux8Way splits the load signal into 8 individual load signals based on the address.
+    // This is used to determine which register will be written to.
     DMux8Way(in=load, sel=address, a=load0, b=load1, c=load2, d=load3, e=load4, f=load5, g=load6, h=load7);
 
-    Register(in=in, load=load0, out=out0);
-    Register(in=in, load=load1, out=out1);
-    Register(in=in, load=load2, out=out2);
-    Register(in=in, load=load3, out=out3);
-    Register(in=in, load=load4, out=out4);
-    Register(in=in, load=load5, out=out5);
-    Register(in=in, load=load6, out=out6);
-    Register(in=in, load=load7, out=out7);
+    // Each "Register" is a 16-bit register.
+    // These registers store the data and output their value when selected.
+    // The load signal for each register (load0, load1, ...) controls whether that register
+    // will store the input value.
+    Register(in=in, load=load0, out=out0);  // First 16-bit register
+    Register(in=in, load=load1, out=out1);  // Second 16-bit register
+    Register(in=in, load=load2, out=out2);  // Third 16-bit register
+    Register(in=in, load=load3, out=out3);  // Fourth 16-bit register
+    Register(in=in, load=load4, out=out4);  // Fifth 16-bit register
+    Register(in=in, load=load5, out=out5);  // Sixth 16-bit register
+    Register(in=in, load=load6, out=out6);  // Seventh 16-bit register
+    Register(in=in, load=load7, out=out7);  // Eighth 16-bit register
 
+    // Mux8Way16 selects the output from one of the eight registers based on the address.
+    // The selected output is sent to the final output `out`.
     Mux8Way16(a=out0, b=out1, c=out2, d=out3, e=out4, f=out5, g=out6, h=out7, sel=address, out=out);
-    //// Replace this comment with your code.
 }
