@@ -9,7 +9,7 @@
  * The value of the selected register is emitted by out.
  */
 CHIP RAM512 {
-    IN in[16], load, address[9];
+    IN in[16], load, dir[9];
     OUT out[16];
 
     PARTS:
