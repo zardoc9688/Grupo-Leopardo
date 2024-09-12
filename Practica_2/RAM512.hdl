@@ -1,0 +1,37 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/3/b/RAM512.hdl
+/**
+ * Memory of 512 16-bit registers.
+ * If load is asserted, the value of the register selected by
+ * address is set to in; Otherwise, the value does not change.
+ * The value of the selected register is emitted by out.
+ */
+CHIP RAM512 {
+    IN in[16], load, address[9];
+    OUT out[16];
+
+    PARTS:
+
+    // First the signal is split into 8 separate signals
+    // Based on the 3 most significant bits of the address, one of the 8 RAM64 banks will be selected
+    DMux8Way(in=load, sel=dir[6..8], a=load0, b=load1, c=load2, d=load3, e=load4, f=load5, g=load6, h=load7);
+
+    // The corresponding 'load' signal is passed according to the output of the demultiplexer which indicates what will be done with the data.
+    // The remaining 6 bits within 'dir' tell me which register is selected
+    // The outputs are stored
+    RAM64(in=in, load=load0, dir=dir[0..5], out=out0);
+    RAM64(in=in, load=load1, dir=dir[0..5], out=out1);
+    RAM64(in=in, load=load2, dir=dir[0..5], out=out2);
+    RAM64(in=in, load=load3, dir=dir[0..5], out=out3);
+    RAM64(in=in, load=load4, dir=dir[0..5], out=out4);
+    RAM64(in=in, load=load5, dir=dir[0..5], out=out5);
+    RAM64(in=in, load=load6, dir=dir[0..5], out=out6);
+    RAM64(in=in, load=load7, dir=dir[0..5], out=out7);
+
+    // A general output is stored the output of one of the previous 8 banks.
+    // All this taking into account the address of the bank that was obtained at the beginning with the 3 bits
+    Mux8Way16(a=out0, b=out1, c=out2, d=out3, e=out4, f=out5, g=out6, h=out7, sel=dir[6..8], out=out);
+    //// Replace this comment with your code.
+}
