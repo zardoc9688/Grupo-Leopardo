@@ -12,6 +12,16 @@ CHIP Add16 {
 
     PARTS:
     //// Replace this comment with your code.
+    /*Here describes how the 16-bit adder is constructed using 16 FullAdder chips (full adders):
+    Each FullAdder adds the corresponding bits of 'a' and 'b', plus the carry from the previous sum.
+    The first FullAdder has its carry entry (c) set to false (0), since there is no previous carry for the least significant bit.
+    Each subsequent FullAdder uses the carry output of the previous FullAdder as its carry input.
+    The sum output of each FullAdder becomes the corresponding bit of the final result (out).
+    The carry output of each FullAdder (except the last one) is used as input to the next FullAdder.
+    The final carry (carryfalse16) is ignored, since this is a 16-bit adder.
+    This design implements a ripple-carry adder, where the carry is propagated from the least significant bit to the most significant bit.
+    */
+    //The explanation of how it works can be found on our the website or on GitHub.
     FullAdder(a=a[0],b=b[0],c=false,sum=out[0],carry=carryfalse1);
     FullAdder(a=a[1],b=b[1],c=carryfalse1,sum=out[1],carry=carryfalse2);
     FullAdder(a=a[2],b=b[2],c=carryfalse2,sum=out[2],carry=carryfalse3);
