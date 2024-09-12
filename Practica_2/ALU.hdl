@@ -41,6 +41,16 @@ CHIP ALU {
         ng;      // if (out < 0)  equals 1, else 0
 
     PARTS:
+    /*Here it is processed to set x to zero (if zx=1) and/or negate it (if nx=1). 
+    It is the same procedure for y.
+    It performs both addition and AND of x and y, and then selects one according to f. 
+    It can negate the final result if not=1. It also sets ng based on the most significant bit. 
+    It checks if any bit in the output is 1. If all are 0, zr is set to 1. 
+    This ALU can perform various operations based on the control bits:
+    It can compute 0, 1, -1, x, y, -x, -y, x+1, y+1, x-1, y-1, x+y, x-y, y-x, x&y, x|y.
+    You can negate any of these outputs.
+    */
+    //The explanation of how it works can be found on our the website or on GitHub.
     Mux16(a=x, b=false, sel=zx, out=xZx);
     Not16(in=xZx, out=notX);
     Mux16(a=xZx, b=notX, sel=nx, out=xNx);
