@@ -11,7 +11,17 @@ CHIP Inc16 {
     OUT out[16];
 
     PARTS:
+    /*This line is the central part of the chip. It uses an Add16 chip (16-bit adder) that has already been implemented:
+    'a=in': the first input to the adder is the 16-bit number we want to increment.
+    'b[0]=true': The least significant bit of the second input is set to true (1).
+    'b[1..15]=false': The 15 most significant bits of the second input are set to false (0).
+    'out=out': The output of the adder is connected directly to the output of the Inc16 chip.
+    By setting b[0]=true and the rest to false, we are effectively creating the binary number 0000000000000001 (1 in decimal).
+    Adding 1 to a number is exactly what incrementing means.
+    This implementation is efficient because it reuses the Add16 chip we already had, rather than creating completely new logic for the increment. 
+    */
+    //The explanation of how it works can be found on our the website or on GitHub.
+    //// Replace this comment with your code.
     Add16(a=in, b[0]=true, b[1..15]=false, out=out);
 
-    //// Replace this comment with your code.
 }
