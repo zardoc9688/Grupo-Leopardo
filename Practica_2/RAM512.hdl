@@ -14,7 +14,7 @@ CHIP RAM512 {
 
     PARTS:
 
-    // First the signal is split into 8 separate signals
+    // First the signal is split into 8 separate signals because there are 8 banks
     // Based on the 3 most significant bits of the address, one of the 8 RAM64 banks will be selected
     DMux8Way(in=load, sel=dir[6..8], a=load0, b=load1, c=load2, d=load3, e=load4, f=load5, g=load6, h=load7);
 
