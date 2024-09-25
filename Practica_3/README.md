@@ -7,7 +7,12 @@ En el Proyecto 3 de las practicas 4 y 5 de Nand2Tetris, el objetivo es diseñar 
 
 1. **¿Por qué el lenguaje de máquina es importante para definir la arquitectura computacional?**
 
-2. **¿Qué diferencia ven entre arquitectura computacional, arquitectura de software y arquitectura del sistema? Justifique su respuesta.**
+El lenguaje de máquina es esencial para definir la arquitectura computacional debido a que representa la conexion directa entre el hardware y el software. A través de este lenguaje, las instrucciones escribe un programador o desarrollador se traducen en operaciones determinadas que debe ejecutar el hardware de la computadora. Por ejemplo, el lenguaje de máquina permite un control total sobre los componentes físicos de la computadora, como la CPU, la memoria y los registros. Cada instrucción en este lenguaje está diseñada específicamente para ser entendida y ejecutada directamente por el hardware, garantizando que las tareas se realicen de manera precisa y rapida.
+Algunas de las caracteristicas que permite realizar este lenguaje es simbolizar procedimientos muy simples, como sumar o almacenar datos, que son fundamentales para construir operaciones más complejas en lenguajes de alto nivel. Finalmente, se podria concluir que el entendimiento de este tipo de lenguaje proporciona una visión clara de cómo los programas se ejecutan realmente dentro del hardware, permitiendo la optimizacion de software para mejorar su interaccion con los componentes fisicos del computador, haciendo que las tareas se realizan de forma mas eficiente y veloz.
+
+
+
+3. **¿Qué diferencia ven entre arquitectura computacional, arquitectura de software y arquitectura del sistema? Justifique su respuesta.**
 
 La arquitectura computacional se centra en el nivel más bajo de la computadora, conteniendo la estructura física (CPU, memoria, etc). Al pasar a la arquitectura de software, se estudia la 
 estructura lógica y cómo se relacionan los módulos, componentes y subsistemas. Finalmente, la arquitectura del sistemas cubre las dos anteriores, de manera que considera cómo los componentes 
