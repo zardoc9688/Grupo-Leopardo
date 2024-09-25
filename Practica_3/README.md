@@ -18,3 +18,15 @@ físicos y lógicos interactúan entre sí.
 - Arquitectura de sistemas: Integra ambos niveles para garantizar que hardware y software trabajen de manera conjunta, eficiente y coherente.
 
 
+## Pregunta bonus
+Como informático o computista: ¿La arquitectura computacional o la arquitectura del sistema no tiene en cuenta igualmente la arquitectura de software?.
+
+ La arquitectura computacional y del sistema tienen en cuenta la arquitectura de software, pero no directamente. Se centran más en el hardware y cómo funciona internamente, aunque esto afecta al software de manera indirecta. Esto es así porque:
+
+ 1) Lo que se decide en el hardware influye en cómo se hace el software. Por ejemplo, según el tipo de procesador, el código se optimiza de una forma u otra.
+ 2) El hardware pone límites de rendimiento que el software no puede ignorar.
+ 3) El sistema operativo, que es parte de la arquitectura del sistema, da una base y herramientas que el software usa.
+ 4) Cuando el hardware avanza, como con los procesadores de varios núcleos, cambia la forma en que se programa.
+ 5) En los sistemas complejos de hoy en día, se suele pensar en todo junto, desde el hardware hasta las aplicaciones.
+
+Así que, aunque no sea lo principal en lo que se fijan, la arquitectura computacional y del sistema sí acaban afectando a cómo se diseña y evoluciona el software.
