@@ -1,4 +1,4 @@
-# Desarrollo de la tercera practica (Practica#3).
+# Desarrollo de la tercera práctica (Práctica #3).
 
 ## Proyecto #4 y 5 (Introducción)
 
