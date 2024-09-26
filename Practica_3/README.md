@@ -7,7 +7,7 @@ El proyecto #4 titulado Programacion en lenguaje de maquina, introduce a los est
 
 ## Proyecto #5 (Introduccion)
 
-La pratcica 3 involucra los proyectos 4 y 5 de Nand2Tetris, el objetivo general de ambos es diseñar y ensamblar los componentes principales que componen una computadora funcional, específicamente la memoria (Memory.hdl), la CPU (CPU.hdl) y el chip de computadora completo (Computer.hdl). A través de estos elementos, se lograra integrar los módulos de procesamiento y almacenamiento que permiten que la computadora Hack ejecute programas escritos en su lenguaje de máquina, y ademas, los dos programas clave en este proyecto son Mult.asm y Fill.asm, cada uno con un propósito específico que nos permitirá explorar cómo interactúa el código ensamblador con la memoria, la pantalla y el teclado de la computadora Hack.
+El objetivo principal del proyecto es completar el diseño de una computadora funcional que pueda ejecutar programas simples, basando su comportamiento en la ejecución secuencial de instrucciones y la manipulación de datos a través de su memoria y CPU.
 
 
 1. **¿Por qué el lenguaje de máquina es importante para definir la arquitectura computacional?**
