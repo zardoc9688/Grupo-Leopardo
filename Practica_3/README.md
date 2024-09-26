@@ -1,6 +1,11 @@
 # Desarrollo de la tercera práctica (Práctica #3).
 
-## Proyecto #4 y 5 (Introducción)
+## Proyecto #4 (Introducción)
+
+El proyecto #4 titulado Programacion en lenguaje de maquina, introduce a los estudiantes al lenguaje de máquina (tambien llamado lenguaje ensamblador) y su relación con la arquitectura de computadores, explicando cómo las instrucciones de software se convierten en operaciones que el hardware puede ejecutar rapidamente. Los practicantes escribirán programas en lenguaje de máquina y ejecutarán sus códigos en la computadora Hack simulada. En el proceso, construirán dos programas clave: Mult.asm, que multiplica dos números almacenados en memoria, y Fill.asm, que detecta la entrada del teclado y modifica la pantalla en consecuencia. El desarrollo de estos chips permite comprender como es el control básico de la CPU y la memoria y asi mismo las entradas y salidas que alli se manejan. Este proyecto representa los principios fundamentales para entender la relacion entre la estructura interna de un computador y el software y como ambos trabajan en conjunto. 
+
+
+## Proyecto #5 (Introduccion)
 
 La pratcica 3 involucra los proyectos 4 y 5 de Nand2Tetris, el objetivo general de ambos es diseñar y ensamblar los componentes principales que componen una computadora funcional, específicamente la memoria (Memory.hdl), la CPU (CPU.hdl) y el chip de computadora completo (Computer.hdl). A través de estos elementos, se lograra integrar los módulos de procesamiento y almacenamiento que permiten que la computadora Hack ejecute programas escritos en su lenguaje de máquina, y ademas, los dos programas clave en este proyecto son Mult.asm y Fill.asm, cada uno con un propósito específico que nos permitirá explorar cómo interactúa el código ensamblador con la memoria, la pantalla y el teclado de la computadora Hack.
 
