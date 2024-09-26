@@ -3,10 +3,29 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/4/Fill.asm
 
-// Runs an infinite loop that listens to the keyboard input. 
-// When a key is pressed (any key), the program blackens the screen,
-// i.e. writes "black" in every pixel. When no key is pressed, 
-// the screen should be cleared.
+// Este programa escucha continuamente la entrada del teclado
+// y cambia el estado de la pantalla según si se ha presionado una tecla o no.
+// Si se presiona una tecla, el programa pinta toda la pantalla de negro.
+// Si no hay ninguna tecla presionada, el programa pinta toda la pantalla de blanco.
+// 
+// El programa principal comienza en (BEGIN), donde verifica si hay alguna
+// entrada en el teclado revisando la memoria mapeada a @KBD.
+// Si el valor de @KBD es diferente de 0 (es decir, una tecla está presionada), 
+// salta a la sección (BLACK) para pintar la pantalla de negro.
+// Si el valor de @KBD es 0 (ninguna tecla está presionada), salta a la sección
+// (WHITE) para pintar la pantalla de blanco.
+// 
+// En la sección (BLACK), un contador recorre cada posición de la memoria mapeada
+// a la pantalla (@SCREEN), escribiendo -1 (negro) en cada celda de la memoria 
+// hasta que toda la pantalla está pintada. Luego regresa al inicio del programa.
+// 
+// En la sección (WHITE), el contador hace lo mismo, pero escribe 0 (blanco)
+// en cada celda de la memoria de la pantalla, y al terminar, también regresa al
+// inicio del programa, para verificar nuevamente la entrada del teclado.
+// 
+// El proceso es continuo y forma un ciclo infinito, alternando entre pintar la pantalla
+// de negro cuando una tecla está presionada y de blanco cuando no hay teclas presionadas.
+
 
 //// Replace this comment with your code.
 
