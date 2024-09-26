@@ -7,7 +7,10 @@ El proyecto #4 titulado Programacion en lenguaje de maquina, introduce a los est
 
 ## Proyecto #5 (Introduccion)
 
-El objetivo principal del proyecto es completar el diseño de una computadora funcional que pueda ejecutar programas simples, basando su comportamiento en la ejecución secuencial de instrucciones y la manipulación de datos a través de su memoria y CPU.
+El objetivo principal es completar la construcción de la plataforma de hardware Hack. En proyectos anteriores, se construyeron los 
+dispositivos básicos de procesamiento y almacenamiento, como la ALU y la RAM. Ahora, en este proyecto, se ensamblarán estos componentes 
+junto con otros elementos clave para formar una computadora funcional de propósito general que pueda ejecutar programas escritos en el 
+lenguaje de máquina Hack.
 
 
 1. **¿Por qué el lenguaje de máquina es importante para definir la arquitectura computacional?**
